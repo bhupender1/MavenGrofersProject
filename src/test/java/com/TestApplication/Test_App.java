@@ -1,5 +1,6 @@
 package com.TestApplication;
 
+import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -14,9 +15,11 @@ import com.PageObjectMainClass.AddToCart;
 import com.PageObjectMainClass.CheckApplicationTitle;
 import com.PageObjectMainClass.LinksWorkingOrNotMain;
 import com.PageObjectMainClass.PageElementVerifyMain;
+import com.PageObjectMainClass.ReadTheLink;
 import com.PageObjectMainClass.StoreCardCategoryMain;
 import com.PageObjects.LinksOpenOrNotObjects;
 import com.Utility.Constant;
+import com.Utility.ExcelUtility;
 
 
 
@@ -54,6 +57,14 @@ public class Test_App {
 	{
 		LinksWorkingOrNotMain linksmain=new LinksWorkingOrNotMain(driver);
 		linksmain.LinkToBeOpen();
+	}
+	@Test(priority=4)
+	public void ReadLinksInExcel() throws Exception
+	{
+		ReadTheLink readlink=new ReadTheLink(driver);
+		String res=readlink.TotalLinks();
+		ExcelUtility.setCellData(Constant.Excel_Path,res,"sheet1", 1, 50);
+		
 	}
 	
 }

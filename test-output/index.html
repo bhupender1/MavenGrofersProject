@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-First1">
-              <span class="suite-name border-passed">First1</span>
+              <span class="suite-name border-failed">First1</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">5 methods, 2 failed,   3 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-First1" class="hide-methods failed suite-First1"> (hide)</a> <!-- hide-methods failed suite-First1 -->
+                      <a href="#" panel-name="suite-First1" class="show-methods failed suite-First1"> (show)</a> <!-- show-methods failed suite-First1 -->
+                    </span>
+                    <div class="method-list-content failed suite-First1">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-First1" title="com.TestApplication.Test_App" hash-for-method="ReadLinksInExcel">ReadLinksInExcel</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-First1" title="com.TestApplication.Test_App" hash-for-method="verifypagelement">verifypagelement</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-First1 -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,7 +121,17 @@
                     <div class="method-list-content passed suite-First1">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-First1" title="com.TestApplication.Test_App" hash-for-method="TestAddtocart">TestAddtocart</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-First1" title="com.TestApplication.Test_App" hash-for-method="ApplicationTittle">ApplicationTittle</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-First1" title="com.TestApplication.Test_App" hash-for-method="linkWorking">linkWorking</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-First1" title="com.TestApplication.Test_App" hash-for-method="storeandobject">storeandobject</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-First1 -->
@@ -117,6 +146,63 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-First1" class="panel First1">
+          <div class="suite-First1-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.TestApplication.Test_App</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="ReadLinksInExcel">
+                  </a> <!-- ReadLinksInExcel -->
+                  <span class="method-name">ReadLinksInExcel</span>
+                  <div class="stack-trace">java.lang.ClassCastException: java.util.ArrayList cannot be cast to org.openqa.selenium.WebElement
+	at com.PageObjectMainClass.ReadTheLink.TotalLinks(ReadTheLink.java:25)
+	at com.TestApplication.Test_App.ReadLinksInExcel(Test_App.java:65)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifypagelement">
+                  </a> <!-- verifypagelement -->
+                  <span class="method-name">verifypagelement</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text()=&apos;20% cashback for new users | Code: GROFERS20&apos;]&quot;}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;BHUPENDER&apos;, ip: &apos;192.168.43.11&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.35.528161 (5b82f2d2aae0ca..., userDataDir: C:\Users\BHUPEN~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 65.0.3325.181, webStorageEnabled: true}
+Session ID: b622b6075e9586b04dc3ff5f0b191340
+*** Element info: {Using=xpath, value=//*[text()=&apos;20% cashback for new users | Code: GROFERS20&apos;]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy9.isEnabled(Unknown Source)
+	at com.PageObjectMainClass.PageElementVerifyMain.check(PageElementVerifyMain.java:72)
+	at com.TestApplication.Test_App.verifypagelement(Test_App.java:47)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-First1-class-failed -->
           <div class="suite-First1-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -125,9 +211,23 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TestAddtocart">
-                  </a> <!-- TestAddtocart -->
-                  <span class="method-name">TestAddtocart</span>
+                  <a name="ApplicationTittle">
+                  </a> <!-- ApplicationTittle -->
+                  <span class="method-name">ApplicationTittle</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="linkWorking">
+                  </a> <!-- linkWorking -->
+                  <span class="method-name">linkWorking</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="storeandobject">
+                  </a> <!-- storeandobject -->
+                  <span class="method-name">storeandobject</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -185,16 +285,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TestAddtocart')
+data.setCell(0, 1, 'storeandobject')
 data.setCell(0, 2, 'com.TestApplication.Test_App')
-data.setCell(0, 3, 54);
+data.setCell(0, 3, 2636);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'linkWorking')
+data.setCell(1, 2, 'com.TestApplication.Test_App')
+data.setCell(1, 3, 1798);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'verifypagelement')
+data.setCell(2, 2, 'com.TestApplication.Test_App')
+data.setCell(2, 3, 715);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'ReadLinksInExcel')
+data.setCell(3, 2, 'com.TestApplication.Test_App')
+data.setCell(3, 3, 113);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'ApplicationTittle')
+data.setCell(4, 2, 'com.TestApplication.Test_App')
+data.setCell(4, 3, 86);
 window.suiteTableData['First1']= { tableData: data, tableDiv: 'times-div-First1'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 54 ms</span>
+              <span class="suite-total-time">Total running time: 5 seconds</span>
               <div id="times-div-First1">
               </div> <!-- times-div-First1 -->
             </div> <!-- times-div -->
@@ -226,8 +342,28 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">TestAddtocart</span>
-                <span class="method-start">27129 ms</span>
+                <span class="method-name">ApplicationTittle</span>
+                <span class="method-start">54087 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifypagelement</span>
+                <span class="method-start">54186 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">storeandobject</span>
+                <span class="method-start">54917 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">linkWorking</span>
+                <span class="method-start">57553 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">ReadLinksInExcel</span>
+                <span class="method-start">59356 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -6,8 +6,9 @@
     <classes>
       <class name="com.TestApplication.Test_App">
         <methods>
+          <include name="ReadLinksInExcel"/>
           <include name="TestApplication"/>
-          <include name="TestAddtocart"/>
+          <include name="verifypagelement"/>
         </methods>
       </class> <!-- com.TestApplication.Test_App -->
     </classes>

@@ -5,6 +5,7 @@
     <classes>
       <class name="com.TestApplication.Test_App">
         <methods>
+          <include name="ReadLinksInExcel"/>
           <include name="TestApplication"/>
         </methods>
       </class> <!-- com.TestApplication.Test_App -->
