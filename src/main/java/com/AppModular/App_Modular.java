@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import com.PageObjectMainClass.AddToCart;
+import com.PageObjectMainClass.LocationSelectorMain;
 import com.PageObjectMainClass.CheckApplicationTitle;
 import com.PageObjects.PageElementVerifyObjects;
 import com.Utility.Constant;

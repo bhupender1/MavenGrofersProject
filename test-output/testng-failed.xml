@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test thread-count="5" name="Test(failed)">
+  <parameter name="browser" value="chrome"/>
+  <test name="Test1(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
       <class name="com.TestApplication.Test_App">
         <methods>
-          <include name="ReadLinksInExcel"/>
-          <include name="storeandobject"/>
-          <include name="TestApplication"/>
-          <include name="linkWorking"/>
-          <include name="verifypagelement"/>
-          <include name="ApplicationTittle"/>
+          <include name="SelectAddToCartElement"/>
+          <include name="close"/>
         </methods>
       </class> <!-- com.TestApplication.Test_App -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Test1(failed) -->
 </suite> <!-- Failed suite [Suite] -->
